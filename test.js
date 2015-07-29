@@ -17,3 +17,5 @@ it('should convert csv to json', function (cb) {
 		contents: fs.readFileSync(__dirname + '/sample/sample-csv.csv')
 	}));
 });
+
+
