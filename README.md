@@ -26,12 +26,20 @@ gulp.task('default', function () {
 		.pipe(rename({extname: '.json'}))
 		.pipe(gulp.dest('dist'));
 });
+
+gulp.task('default', function () {
+	gulp.src('src/**/*.csv')
+		.pipe(csv2json({delimiter: ';'}))
+		.pipe(rename({extname: '.json'}))
+		.pipe(gulp.dest('dist'));
+});
 ```
 
 
 ## API
 
 ### csv2json(option)
+#### options.delimiter : defines the delimiter to be used (default is ',')
 
 
 ## License

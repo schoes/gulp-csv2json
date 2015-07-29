@@ -4,7 +4,7 @@ var rename = require('gulp-rename');
 
 gulp.task('default', function () {
     gulp.src('./sample/*.csv')
-        .pipe(csv2json())
-				.pipe(rename({extname: '.json'}))
+        .pipe(csv2json({delimiter:';'}))
+        .pipe(rename({extname: '.json'}))
         .pipe(gulp.dest('./dist'));
 });
