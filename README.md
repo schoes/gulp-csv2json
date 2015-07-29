@@ -26,7 +26,7 @@ gulp.task('default', function () {
 		.pipe(rename({extname: '.json'}))
 		.pipe(gulp.dest('dist'));
 });
-
+### With delimiter
 gulp.task('default', function () {
 	gulp.src('src/**/*.csv')
 		.pipe(csv2json({delimiter: ';'}))
@@ -39,7 +39,8 @@ gulp.task('default', function () {
 ## API
 
 ### csv2json(option)
-#### options.delimiter : defines the delimiter to be used (default is ',')
+#### options.delimiter
+defines the delimiter to be used (default is ',')
 
 
 ## License
